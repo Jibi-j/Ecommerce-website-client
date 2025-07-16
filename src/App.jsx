@@ -33,7 +33,6 @@ import CreateProduct from "./pages/user/Seller/CreateProduct";
 import SellerOrders from "./pages/user/Seller/SellerOrder";
 import MyProducts from "./pages/user/Seller/MyProducts";
 import AdminOrders from "./pages/Admin/AdminOrders";
-
 import NotFound from "./components/NotFound";
 const App = () => {
   return (
