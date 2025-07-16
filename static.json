@@ -6,4 +6,9 @@
     }
   ]
 }
+"scripts": {
+  "build": "vite build",
+  "postbuild": "cp public/static.json dist/static.json"
+}
+
 
