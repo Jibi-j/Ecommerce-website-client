@@ -24,7 +24,7 @@ const SellerOrders = () => {
   if (loading) return <p className="text-center">Loading orders...</p>;
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
+    <div className="p-4 sm:p-6 max-w-5xl mx-auto text-black">
       <h2 className="text-2xl font-bold mb-6">My Orders</h2>
       {orders.map(order => (
         <div key={order._id} className="border p-4 rounded mb-4 shadow-sm bg-white">
