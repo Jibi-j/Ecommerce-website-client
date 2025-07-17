@@ -52,12 +52,12 @@ const MyProducts = () => {
     }, []);
 
     return (
-        <div className="p-6 text-black">
-            <h2 className="text-2xl font-bold mb-4"> My Products</h2>
+        <div className="p-4 sm:p-6 text-black max-w-7xl mx-auto">
+  <h2 className="text-2xl font-bold mb-4">My Products</h2>
 
-            {editProduct && (
-                <div className="border p-4 mb-6 bg-gray-50">
-                    <h3 className="text-xl font-semibold mb-2"> Edit Product</h3>
+  {editProduct && (
+    <div className="border p-4 mb-6 bg-gray-50 rounded shadow">
+      <h3 className="text-xl font-semibold mb-2">Edit Product</h3>
                     <input
                         type="text"
                         placeholder="Title"
