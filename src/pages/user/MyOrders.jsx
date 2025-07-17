@@ -17,9 +17,12 @@ const MyOrders = () => {
     }
   };
 
-  useEffect(() => {
-    fetchOrders();
-  }, []);
+ useEffect(() => {
+  const token = JSON.parse(localStorage.getItem("userInfo"))?.token;
+  if (!token) return;
+
+  fetchOrders();
+}, []);
 
   if (loading) {
     return <p className="text-gray-500 text-center">Loading your orders...</p>;
