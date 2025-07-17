@@ -10,27 +10,37 @@ const UserNavbar = () => {
   const dispatch = useDispatch();
 
   return (
-    <header className={`shadow p-4 flex justify-between items-center ${mode === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-      <div className="flex items-center space-x-4">
-        <Link to="/" className="font-medium">
+    <header
+      className={`w-full shadow px-4 py-3 flex flex-wrap justify-between items-center ${
+        mode === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
+      }`}
+    >
+      <div className="flex items-center space-x-4 mb-2 md:mb-0">
+        <Link to="/" className="font-medium text-lg hover:underline">
           Home
         </Link>
       </div>
 
-      <h1 className="text-xl font-semibold">Dashboard</h1>
+      <h1 className="text-lg md:text-xl font-semibold text-center flex-1 md:flex-none md:mr-6">
+        Dashboard
+      </h1>
 
       <div className="flex items-center space-x-4">
-        <button onClick={() => dispatch(toggleTheme())}>
-          {mode === "dark" ? <FaSun className="text-yellow-400" /> : <FaMoon className="text-gray-700" />}
+        <button onClick={() => dispatch(toggleTheme())} aria-label="Toggle Theme">
+          {mode === "dark" ? (
+            <FaSun className="text-yellow-400 text-lg" />
+          ) : (
+            <FaMoon className="text-gray-700 text-lg" />
+          )}
         </button>
 
         {userData && (
-          <Link to="/dashboard" className="hover:text-primary text-xl">
+          <Link to="/dashboard" className="text-xl hover:text-green-500">
             <FaUserCircle />
           </Link>
         )}
 
-        <Link to="/cart" className="hover:text-primary text-xl">
+        <Link to="/cart" className="text-xl hover:text-green-500">
           <FaShoppingCart />
         </Link>
       </div>
