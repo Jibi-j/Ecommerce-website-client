@@ -23,7 +23,7 @@ const AdminDashboard = () => {
     <div className="flex min-h-screen">
       <aside className="w-64 bg-pink-100 text-black p-6">
         <h2 className="text-xl font-bold mb-4">Admin Panel</h2>
-        <p className="text-sm text-gray-700 mb-6">Hi, {user?.name}</p>
+        <p className="text-sm text-gray-700 mb-6"> {user?.name}</p>
 
         <ul className="space-y-4">
           <li>
@@ -44,7 +44,7 @@ const AdminDashboard = () => {
           <li>
             <button
               onClick={handleLogout}
-              className="text-red-600 hover:underline mt-4"
+              className="text-red-600 "
             >
               Logout
             </button>
