@@ -42,7 +42,7 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className=p-4 sm:p-6 max-w-xl mx-auto text-black">
       <h2 className="text-2xl font-semibold mb-4">Create Product</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
