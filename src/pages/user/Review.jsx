@@ -8,10 +8,12 @@ const Review = () => {
   const [editedComment, setEditedComment] = useState("");
   const [editedRating, setEditedRating] = useState(5);
 
-  useEffect(() => {
-    fetchReviews();
-  }, []);
+ useEffect(() => {
+  const token = JSON.parse(localStorage.getItem("userInfo"))?.token;
+  if (!token) return;
 
+  fetchReviews();
+}, []);
   const fetchReviews = async () => {
     try {
       const res = await api.get("/review");
