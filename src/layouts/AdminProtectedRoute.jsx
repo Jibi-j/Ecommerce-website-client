@@ -6,17 +6,20 @@ const AdminProtectedRoute = ({ children }) => {
     ? JSON.parse(localStorage.getItem("userInfo"))
     : null;
 
-  //console.log(" AdminProtectedRoute user:", user);
-
   if (!user) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login" replace />;
   }
 
-  if (user.role !== "admin") {
-    return <Navigate to="/unauthorized" />;
+
+  if (
+    user.role !== "admin" ||
+    user.email !== "admin123@gmail.com"
+  ) {
+    return <Navigate to="/unauthorized" replace />;
   }
 
   return children;
 };
 
 export default AdminProtectedRoute;
+
